@@ -22,11 +22,62 @@ namespace newquizapp
     /// </summary>
     public sealed partial class history : Page
     {
+        private List<questionbank> questions;
+        private int index;
+        private int score = 0;
+        string subject = "";
         public history()
         {
             this.InitializeComponent();
-        }
+            loadHistoryQuestion();
+            setHistoryQuestion();
 
+        }
+        private void loadHistoryQuestion()
+        {
+            questions = new List<questionbank>
+        {
+            new questionbank
+            {
+                Category = "History",
+                Question = "which famous explorer is credited with discovery of America",
+                Option1 = "Christopher",
+                Option2 = "Vasco",
+                Option3 = "Ferdinnad",
+                Option4 = "James Cook",
+                CorrectOption = 1
+
+            },
+             new questionbank
+            {
+                Category = "History",
+                Question = "which famous explorer is credited with discovery of souce of the Nile",
+                Option1 = "John the baptist",
+                Option2 = "Vasco",
+                Option3 = "Ferdinnad",
+                Option4 = "James Cook",
+                CorrectOption = 2
+
+            }
+        };
+
+        }
+        private void setHistoryQuestion()
+        {
+            if(index < questions.Count)
+            {
+                var currentquestion = questions[index];
+                Subject.Text = currentquestion.Category;
+                Question.Text = currentquestion.Question;
+                Option1.Content = currentquestion.Option1;
+                Option2.Content = currentquestion.Option2;
+                Option3.Content = currentquestion.Option3;
+                Option4.Content = currentquestion.Option4;
+                resultbox.Text = score.ToString();
+
+            }
+
+        }
         private void back(object sender, RoutedEventArgs e)
         {
             Frame.GoBack();

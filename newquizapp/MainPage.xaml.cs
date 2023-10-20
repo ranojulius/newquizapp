@@ -22,6 +22,7 @@ namespace newquizapp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+       
         public MainPage()
         {
             this.InitializeComponent();

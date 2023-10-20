@@ -8,6 +8,7 @@ namespace newquizapp
 {
     class questionbank
     {
+        public string Category { get; set; }
         public string Question { get; set; }
         public string Option1 { get; set; }
         public string Option2 { get; set; }
