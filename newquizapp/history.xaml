@@ -9,6 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <CommandBar>
+            <AppBarButton Icon="Back" Label="BACK" Click="back"/>
+        </CommandBar>
     </Grid>
 </Page>

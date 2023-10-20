@@ -26,5 +26,10 @@ namespace newquizapp
         {
             this.InitializeComponent();
         }
+
+        private void back(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 }
