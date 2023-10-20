@@ -9,6 +9,38 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <StackPanel Margin="0 0 0 0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button Content="History"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0 0 0 0"
+                Background="RoyalBlue" Click="history"
+                />
+            <Button Content="Science"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0 20 0 0"
+                Background="Yellow"
+                />
+            <Button Content="Sports"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0 20 0 0"
+                Background="PaleVioletRed"
+                />
+            <Button Content="General Knowledge"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0 20 0 0"
+                Background="ForestGreen"
+                />
 
+        </StackPanel>
     </Grid>
 </Page>
