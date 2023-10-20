@@ -73,14 +73,56 @@ namespace newquizapp
                 Option2.Content = currentquestion.Option2;
                 Option3.Content = currentquestion.Option3;
                 Option4.Content = currentquestion.Option4;
-                resultbox.Text = score.ToString();
+                
 
+            }
+            else
+            {
+                Question.Text = "END TEST";
+                Option1.IsEnabled = false;
+                Option2.IsEnabled = false;
+                Option3.IsEnabled = false;
+                Option4.IsEnabled = false;
+                resultbox.Text = score.ToString();
             }
 
         }
         private void back(object sender, RoutedEventArgs e)
         {
             Frame.GoBack();
+
+
+        }
+
+        private void trybtn(object sender, RoutedEventArgs e)
+        {
+
+            if (Option1.IsChecked == false && Option2.IsChecked == false && Option3.IsChecked == false && Option4.IsChecked == false)
+            {
+                return;
+            }
+            var currentquestion = questions[index];
+            var CorrectOption = currentquestion.CorrectOption;
+            if (Option1.IsChecked == true && CorrectOption == 1 ||
+                Option2.IsChecked == true && CorrectOption == 2 ||
+                Option3.IsChecked == true && CorrectOption == 3 ||
+                Option4.IsChecked == true && CorrectOption == 4)
+            {
+                score += 1;
+                resultbox.Text = "answer is correct";
+            }
+            else
+            {
+                resultbox.Text = "answer is wrong";
+            }
+            index++;
+            setHistoryQuestion();
+            Option1.IsChecked = false;
+            Option2.IsChecked = false;
+            Option3.IsChecked = false;
+            Option4.IsChecked = false;
+
+
         }
     }
 }
