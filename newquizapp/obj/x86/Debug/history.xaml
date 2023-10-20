@@ -9,7 +9,64 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='10' Icon="Back" Label="BACK"             />
+        </CommandBar>
 
+       
+
+        <TextBlock Text="Quiz"
+                   Grid.Row="0"
+                   FontSize="50"
+                   HorizontalAlignment="Center"
+                   Margin="0 50 0 0"
+                   FontWeight="Bold"/>
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    Margin="0 150 0 0">
+            <TextBlock x:ConnectionId='2' Text="Category"
+                       Name="Subject"
+                       FontSize="40"
+                       HorizontalAlignment="Center"
+                       FontWeight="Black"/>
+            <TextBlock x:ConnectionId='3' Text="Question"
+                       FontSize="30"
+                       HorizontalAlignment="Center"
+                       Name="Question"
+                       />
+            <RadioButton x:ConnectionId='4' Content="Option1"
+                         Name="Option1"
+                         FontSize="25"
+                         HorizontalAlignment="Center"/>
+            <RadioButton x:ConnectionId='5' Content="Option2"
+                         Name="Option2"
+                         FontSize="25"
+                         HorizontalAlignment="Center"/>
+            <RadioButton x:ConnectionId='6' Content="Option3"
+                         Name="Option3"
+                         FontSize="25"
+                         HorizontalAlignment="Center"/>
+            <RadioButton x:ConnectionId='7' Content="Option4"
+                         Name="Option4"
+                         FontSize="25"
+                         HorizontalAlignment="Center"/>
+            <TextBlock x:ConnectionId='8' Text="ResultBox"
+                       Name="resultbox"
+                       FontSize="25"
+                       Margin="0 20 0 0 "
+                       HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='9' Content="SUBMIT"
+                    Name="btnsub"
+                    HorizontalAlignment="Center"
+                    Margin="0 20 0 0 "
+                    FontSize="30"/>
+
+
+        </StackPanel>
     </Grid>
 </Page>
 

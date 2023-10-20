@@ -27,7 +27,7 @@ namespace newquizapp
             this.InitializeComponent();
         }
 
-        private void history(object sender, RoutedEventArgs e)
+        private void history_click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(history));
         }
